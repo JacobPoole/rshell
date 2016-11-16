@@ -17,4 +17,4 @@ void Or::execute(string cmd_str, bool &prev_cmd)
 		//execute command
 		cmd->execute(cmd_str, prev_cmd);
 	}
-}
+
