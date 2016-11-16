@@ -15,7 +15,7 @@ class And : public Rshell
 			this->cmd = cmd;
 		}
 		
-		void execute(string cmd, bool &prev_cmd);
+		void execute(string cmd_str, bool &prev_cmd);
 };
 
 #endif

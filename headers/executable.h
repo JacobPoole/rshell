@@ -6,15 +6,15 @@
 #include <cerrno>
 #include <sys/wait.h>
 #include <boost/tokenizer.hpp>
-#include "base.h"
+#include "rshell.h"
 
 using namespace std;
 
-class Executable : public Base 
+class Executable : public Rshell
 {
     public:
         Executable() { }
-        void run(string command, bool &previous);
+        void execute(string cmd_str, bool &prev_cmd);
 };
 
 #endif
