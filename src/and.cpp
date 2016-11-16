@@ -1,6 +1,7 @@
 #include "rshell.h"
 #include "../header/and.h"
 #include <string>
+#include <sstream>
 
 using namespace std;
 
