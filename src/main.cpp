@@ -13,8 +13,8 @@ int main()
 	bool prev_cmd = true;
 	char hostname[100];
 	
-	//FIXME:instantiate object of type parse
-	
+	//instantiate object of type parse
+	Parser *cmd_string = new Parser();
 	if (getlogin() == NULL)
 	{
 		user_id = "";
@@ -42,7 +42,8 @@ int main()
 		cout << "$ ";
 		//get user input
 		getline(cin,cmd);
-		//FIXME: need a line of code for parsing here
+		//parse
+		cmd_string->parse(cmd, prev_cmd);
 	}
 
 	return 0;

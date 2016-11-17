@@ -14,7 +14,7 @@ class Pipe
 {
     public:
         Pipe() { }
-        void execute(string command, bool &prev_cmd);
+        void run(string command, bool &prev_cmd);
 };
 
 #endif

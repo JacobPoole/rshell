@@ -1,7 +1,8 @@
 #ifndef __OR_H__
 #define __OR_H__
 
-#include "Rshell.h"
+#include "rshell.h"
+#include <string>
 
 using namespace std;
 

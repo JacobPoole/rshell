@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Paren::run(string command, bool &previous)
+void Paren::execute(string command, bool &previous)
 {
     //command should be combination of more than one command
     //recall parse to execute these first then program will move
