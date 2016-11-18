@@ -1,0 +1,12 @@
+echo "Testing commands with comments..."
+echo
+
+echo "executes 'ls' but does not print habberdasher"
+ls #habberdasher
+echo
+
+echo "executes touch jinkies but doesn't execute touch the_rainbow"
+touch jinkiies #touch the_rainbow
+echo
+
+echo "bye again..." && exit

@@ -36,7 +36,7 @@ int main()
 		//print out hostname and user id
 		if (getlogin() != NULL)
 		{
-			cout << "[" <<  user_id << "@" << hostname << "]";
+			cout << user_id << "@" << hostname;
 		}
 		
 		cout << "$ ";
