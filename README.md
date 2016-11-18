@@ -57,8 +57,6 @@ commented_command.sh
 exit.sh
 test_test.sh
 precedence_test.sh
-commented_command.sh
-exit.sh
 ```
 
 Run Instructions
