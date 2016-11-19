@@ -1,6 +1,6 @@
 #Compiler
 CC=g++ 
-CFLAGS=-Wall -Werror -ansi -pedantic -I$(HEADERDIR)
+CFLAGS=-Wall -Werror -ansi -pedantic
 
 #Name of executable
 TARGET=./bin/rshell
@@ -8,12 +8,10 @@ TARGET=./bin/rshell
 #Source and object dir
 OBJDIR=bin
 SRCDIR=src
-HEADERDIR=header
 
 #Files and directories
 SOURCES=$(wildcard $(SRCDIR)/*.cpp)
 OBJECTS=$(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
-
 
 #Targets
 all: $(TARGET)

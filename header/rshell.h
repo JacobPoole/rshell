@@ -1,8 +1,6 @@
 #ifndef __RSHELL_H__
 #define __RSHELL_H__
 
-#include <string>
-
 using namespace std;
 
 class Rshell

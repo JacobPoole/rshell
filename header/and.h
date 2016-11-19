@@ -1,8 +1,7 @@
 #ifndef __AND_H__
 #define __AND_H__
 
-#include "rshell.h"
-#include <string>
+#include "Rshell.h"
 
 using namespace std;
 

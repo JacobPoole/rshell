@@ -2,15 +2,11 @@
 #include "../header/and.h"
 #include <string>
 #include <sstream>
-#include <vector>
 
 using namespace std;
 
 void And::execute(string cmd_str, bool &prev_cmd)
 {
-	size_t keyword = cmd_str.find("test");
-	size_t bracket = cmd_str.find("[");
-
 	//error checking for prev command
 	if (!prev_cmd)
 	{
@@ -18,6 +14,9 @@ void And::execute(string cmd_str, bool &prev_cmd)
 	}
 
 	//check for test command
+	size_t keyword = cmd_str.find("test");
+	size_t bracket = cmd_str.find("[");
+
 	else if (keyword != string::npos || bracket != string::npos)
 	{
 		//test ojbect
@@ -39,12 +38,10 @@ void And::execute(string cmd_str, bool &prev_cmd)
 			//instance of test class
 		}
 
-		else 
-		{
+		else {
 			cmd_str.append(" -e");
 			//instace of test class starting at (1)
 		}
-	}
 
 	//execute normally (from assn 2)
 	else 
