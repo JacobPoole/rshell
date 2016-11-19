@@ -3,7 +3,6 @@
 
 #include "Rshell.h"
 
-using namespace std;
 
 class And : public Rshell 
 {
