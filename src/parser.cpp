@@ -1,5 +1,4 @@
 #include "../header/parser.h"
-#include <vector>
 
 using namespace std;
 
@@ -175,7 +174,7 @@ void Parser::parse(string command, bool &previous)
         cout << fixedCommand.at(i) << endl;
     }
     
-    vector<Rshell* > execute;
+    vector<Base* > execute;
     
     //iterate through fixedCommand to create the appropriate object type based
     //on the connector before each command
@@ -206,14 +205,14 @@ void Parser::parse(string command, bool &previous)
             //flag was input
             if (checkFlag != string::npos)
             {
-                x->execute(fixedCommand.at(i), tokens.at(2), previous);
+                x->run(fixedCommand.at(i), tokens.at(2), previous);
             }
             
             //no flag so append '-e' flag
             else
             {
                 fixedCommand.at(i).append(" -e");
-                x->execute(fixedCommand.at(i), tokens.at(1), previous);
+                x->run(fixedCommand.at(i), tokens.at(1), previous);
             }
             ++i;
         }
@@ -229,7 +228,7 @@ void Parser::parse(string command, bool &previous)
         else if (fixedCommand.at(i) == "(")
         {
             Paren* x = new Paren();
-            x->execute(fixedCommand.at(i + 1), previous);
+            x->run(fixedCommand.at(i + 1), previous);
             ++i;
         }
         
@@ -237,7 +236,7 @@ void Parser::parse(string command, bool &previous)
         else if (i == 0)
         {
             Executable* x = new Executable();
-            x->execute(fixedCommand.at(i), previous);
+            x->run(fixedCommand.at(i), previous);
         }
         
         //command is an "Or" command
@@ -247,7 +246,7 @@ void Parser::parse(string command, bool &previous)
             Or* x = new Or(y);
             if (fixedCommand.at(i + 1) != "(" && fixedCommand.at(i + 1) != ">")
             {
-                x->execute(fixedCommand.at(i + 1), previous);
+                x->run(fixedCommand.at(i + 1), previous);
                 ++i;
             }
         }
@@ -259,7 +258,7 @@ void Parser::parse(string command, bool &previous)
             And* x = new And(y);
             if (fixedCommand.at(i + 1) != "(" && fixedCommand.at(i + 1) != ">")
             {
-                x->execute(fixedCommand.at(i + 1), previous);
+                x->run(fixedCommand.at(i + 1), previous);
                 ++i;
             }
         }
@@ -268,7 +267,7 @@ void Parser::parse(string command, bool &previous)
         else if (fixedCommand.at(i) == ";")
         {
             Executable* x = new Executable();
-            x->execute(fixedCommand.at(i + 1), previous);
+            x->run(fixedCommand.at(i + 1), previous);
             ++i;
         }
     }

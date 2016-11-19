@@ -1,4 +1,4 @@
-#include "../header/rshell.h"
+#include "rshell.h"
 #include "../header/and.h"
 #include <string>
 #include <sstream>

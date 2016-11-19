@@ -3,7 +3,7 @@
 using namespace std;
 using namespace boost;
 
-void Executable::execute(string command, bool &previous)
+void Executable::run(string command, bool &previous)
 {
     const string Exit = "exit";
     
