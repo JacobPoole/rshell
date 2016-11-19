@@ -67,4 +67,9 @@ Run Instructions
 
 Bugs
 ----
-1. 
+1. Rshell can't handle the `cd` command
+2. Can't execute commands on the same line `exit()` is called
+3. Can't change user passwords using `pwd`
+4. Doesn't color text like bash
+5. Rshell can't handle `exit` if it is the first command
+6. Pipe: can't handle `ls | cat | wc`
