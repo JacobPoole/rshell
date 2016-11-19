@@ -1,0 +1,48 @@
+echo "Testing test command (the following should return true): "
+echo
+
+echo "Running test commands with path specified:"
+echo
+test -e ../README.md
+test -f ../makefile
+test -d ../header
+[-e ../makefile]
+[-f ../README.md]
+[-d ../src]
+
+echo "Running test commands without path specified:"
+echo
+[-e makefile]
+[-f README.md]
+[-d src]
+
+echo "The following should print false:"
+echo
+test -e ../hi
+test -f ../bye
+test -d ../idk
+[-e yes]
+[-f no]
+[-d maybe]
+[-e ../Harry]
+[-f ../DoctorWho]
+[-d ../StarWars]
+
+echo "Test command without flags (should print true):"
+echo
+test ../README.md
+
+echo "Testing test commands alongside multiple connectors:"
+echo
+
+echo "Testing with: touch sonic.cpp && test -e sonic.cpp (should print true)"
+echo
+touch sonic.cpp && test -e sonic.cpp
+echo
+
+echo "should return false: test -d nyancat || echo 'couldn't find nyancat'"
+test -d nyancat || echo "couldn't find nyancat"
+echo 
+
+echo Bye!
+exit

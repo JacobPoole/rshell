@@ -1,0 +1,10 @@
+echo "Testing multiple commands" && touch Billybob
+echo
+
+la || echo "'la' did not run"  && echo "MERRY CHRISTMAS JACOB!"
+echo
+
+ls -a && echo "Too many cool cats at UCR"
+echo
+
+echo "Oh, look at the time..." && exit

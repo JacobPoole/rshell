@@ -1,0 +1,17 @@
+echo "Hello World!"
+echo
+
+ls
+echo
+
+ls -a
+echo
+
+mkdir bob
+echo
+
+ls -l
+echo
+
+echo "Bye, have a good day!!"
+exit

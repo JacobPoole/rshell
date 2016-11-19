@@ -1,0 +1,2 @@
+echo "Why, hello thar" && echo && echo "Bye!"
+exit

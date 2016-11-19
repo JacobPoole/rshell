@@ -1,0 +1,16 @@
+echo "Testing precedence..."
+echo
+
+echo "Prints: A [\n] B"
+(echo A && echo B) || (echo C && echo D)
+
+echo "Prints: A [\n] B [\n] D [\n]"
+echo A && echo B || echo C && echo D
+
+echo "First part shouldn't return true, but 2nd part does"
+test 3.14 && echo "coutldn't find 3.14" || echo "this is the second part of the command"
+
+echo "Should print knock knock! who's there?"
+(asdfg || echo "knock knock!") && echo "who's there?"
+
+echo "See you next time!" && exit
