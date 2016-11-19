@@ -15,6 +15,7 @@ class Executable : public Rshell
     public:
         Executable() { }
         void execute(string cmd_str, bool &prev_cmd);
+	void run (string, bool);
 };
 
 #endif
