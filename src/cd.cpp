@@ -59,7 +59,8 @@ void Cd :: run (string a, bool & b){
 		}
 	}	
 
-	cout << "PWD = " << getenv("PWD") << endl;
-	cout << "OLDPWD = " << getenv("OLDPWD") << endl;
+//	cout << "PWD = " << getenv("PWD") << endl;
+//	cout << "OLDPWD = " << getenv("OLDPWD") << endl;
+
 }
 

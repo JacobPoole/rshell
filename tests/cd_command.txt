@@ -1,0 +1,16 @@
+cd
+cd -
+cd src
+
+cd src && echo "hi"
+cd - && echo "Jacob, meet wendy"
+cd && echo "Home sweet home"
+cd src || echo "A"
+cd ..
+cd rshell && cd src
+cd ..
+cd rshell || cd src
+cd - && cd rshell
+
+cdp
+cd1
