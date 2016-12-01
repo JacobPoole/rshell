@@ -3,7 +3,7 @@ Rshell
 
 For Licensing Information: Read LICENSE
 
-Authors & Contributors: Jacob Poole, Breena Li
+Authors & Contributors: Jacob Poole, Breena Li, Henry Doan
 
 Overview
 --------
@@ -33,6 +33,7 @@ parser.cpp
 pipe.cpp
 executable.cpp
 test.cpp
+cd.cpp
 ```
 
 ```
@@ -46,6 +47,7 @@ parser.h
 pipe.h
 executable.h
 test.h
+cd.h
 ```
 
 ```
@@ -57,6 +59,14 @@ commented_command.sh
 exit.sh
 test_test.sh
 precedence_test.sh
+cd_command.sh
+single_command.txt
+multi_command.txt
+commented_command.txt
+exit.txt
+test_test.txt
+precedence_test.txt
+cd_command.txt
 ```
 
 Run Instructions
