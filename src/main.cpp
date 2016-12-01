@@ -28,8 +28,9 @@ int main()
     {
         if (getlogin() != NULL)     //Just display "$ " if getlogin() failed
         {
-            cout << login << "@" << host;
+            //cout << login << "@" << host;
         }
+	cout << getenv("PWD");
         cout << "$ ";
         getline(cin, command);      //Get user input
         cmds->parse(command, previous);

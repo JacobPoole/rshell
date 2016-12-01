@@ -624,3 +624,4 @@ void Pipe::run(string command, bool &previous)
             }
     }
 }
+

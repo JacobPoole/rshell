@@ -92,3 +92,4 @@ void Executable::run(string command, bool &previous)
         }
     }
 }
+

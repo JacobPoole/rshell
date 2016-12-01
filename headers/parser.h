@@ -7,6 +7,7 @@
 #include "test.h"
 #include "paren.h"
 #include "pipe.h"
+#include "cd.h"
 
 using namespace std;
 

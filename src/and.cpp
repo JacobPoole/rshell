@@ -54,3 +54,4 @@ void And::run(string command, bool &previous)
         this->cmd->run(command, previous);
     }
 }
+

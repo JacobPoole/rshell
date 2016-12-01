@@ -54,3 +54,4 @@ void Or::run(string command, bool &previous)
         this->cmd->run(command, previous);
     }
 }
+

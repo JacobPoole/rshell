@@ -62,3 +62,4 @@ void Test::run(string command, string path, bool &previous)
         }
     }
 }
+

@@ -10,3 +10,4 @@ void Paren::run(string command, bool &previous)
     Parser* parse = new Parser();
     parse->parse(command, previous);
 }
+
