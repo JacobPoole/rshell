@@ -1,4 +1,7 @@
 #include "../headers/executable.h"
+#include "../headers/cd.h"
+#include <iostream>
+#include <cstring>
 
 using namespace std;
 using namespace boost;
@@ -45,17 +48,26 @@ void Executable::run(string command, bool &previous)
     
     //child process
     if (pid == 0)
-    {
-        if (execvp(temp[0], temp) == -1) 
+   {
+        if (strcmp(temp[0],"cd") == 0){
+            Cd * patricksfat = new Cd();
+            if(mytok.size() == 1)
+                patricksfat->run("",previous);
+            else
+                patricksfat->run(temp[1],previous);
+
+        }
+        else if (execvp(temp[0], temp) == -1) 
         {
-            
+
+
             //error with execvp(0)
             perror("execvp");
             previous = false;
             exit(EXIT_FAILURE);
         }
-    }
-    
+   }
+   
     //parent process
     if (pid > 0)
     {

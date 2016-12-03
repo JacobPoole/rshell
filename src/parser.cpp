@@ -183,7 +183,6 @@ void Parser::parse(string command, bool &previous)
         //test for test command
         size_t found = fixedCommand.at(i).find("test");
         size_t bracket = fixedCommand.at(i).find("[");
-	size_t fuckpatrick = fixedCommand.at(i).find("cd");
         
         //test command was found
         if (found == 0 || bracket == 0)
@@ -218,18 +217,7 @@ void Parser::parse(string command, bool &previous)
             ++i;
         }
         
-	else if(fuckpatrick == 0){
-		if(fixedCommand.at(i) == "cd"){
-			Cd * patrick = new Cd();
-			patrick->run("",previous);
-		}	
-		else{
-			Cd * patricksfat = new Cd();
-			string ilovepatrick = fixedCommand.at(i).substr(3);
-			if(fixedCommand.at(i).substr(0,3) == "cd ")
-				patricksfat->run(ilovepatrick.c_str(),previous);
-		}
-	}
+	
 
         else if (fixedCommand.at(i) == ">")
         {
